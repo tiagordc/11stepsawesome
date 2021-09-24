@@ -45,7 +45,7 @@ cd ..
 export MINIKUBE_HOME=/home/tiago/11steps;
 export PATH=$MINIKUBE_HOME/bin:$PATH
 export KUBECONFIG=$MINIKUBE_HOME/.kube/config
-export KUBE_EDITOR="code -w"
+export KUBE_EDITOR="nano"
 ----
 
 === Startup Minikube
