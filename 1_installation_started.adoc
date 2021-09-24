@@ -35,7 +35,6 @@ and/or
 Download & Install Kubernetes CLI
 [source,bash]
 ----
-# MacOS
 $ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.14.0/bin/darwin/amd64/kubectl 
 # 
 $ chmod +x kubectl
