@@ -137,3 +137,39 @@ ls -lh ~/11steps/.minikube/machines/11steps
 
 minikube --profile 11steps delete 
 ----
+
+=== Configure Env for Docker 
+----
+$ minikube --profile 11steps docker-env <1>
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.108:2376"
+export DOCKER_CERT_PATH="/Users/burrsutter/minikube_0.33.1/bin/.minikube/certs"
+export DOCKER_API_VERSION="1.35"
+# Run this command to configure your shell:
+# eval $(minikube --profile 11steps docker-env)
+# or
+$ eval $(minikube --profile 11steps docker-env)
+# and
+# eval $(minishift oc-env) <2>
+----
+<1> This command allows configure your "docker" CLI tool against your minikube or minishift's Docker daemon.  If you are using GKE, AKS, EKS or other, then you will need to "docker push" your image to that platform's favorite image registry. You can also use quay.io as a vendor neutral registry 
+<2> This command puts the "oc" CLI tool in your PATH
+
+=== Using Docker CLI 
+----
+$ docker ps
+$ docker images
+----
+These commands should now be pulling from your minikube/minishift hosted docker daemon.  You can turn off the Docker for Mac/Windows daemon to save memory.
+
+
+=== Minikube/Minishift Happy?
+----
+$ minikube --profile 11steps ssh <1>
+$ free -h
+$ df -h
+$ top
+$ ctrl-c
+$ exit
+----
+<1> you can shell into your VM and check on resources
