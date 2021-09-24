@@ -10,7 +10,7 @@ https://kubernetes.io/docs/reference/kubectl/cheatsheet
 ----
 sudo apt update
 sudo apt upgrade
-sudo apt-get install virtualbox
+sudo apt-get install virtualbox docker.io
 ----
 
 === Create a Directory
