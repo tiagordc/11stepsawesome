@@ -1,12 +1,6 @@
 = Step 0: Quickstart
-Burr Sutter <burrsuter@gmail.com>
 
-=== Resources
-https://kubernetes.io/docs/user-guide/kubectl/
-
-https://kubernetes.io/docs/reference/kubectl/cheatsheet
-
-=== Update
+=== Prerequisites
 ----
 sudo apt update
 sudo apt upgrade
