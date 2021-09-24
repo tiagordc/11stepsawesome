@@ -6,6 +6,12 @@ https://kubernetes.io/docs/user-guide/kubectl/
 
 https://kubernetes.io/docs/reference/kubectl/cheatsheet
 
+=== Update
+----
+sudo apt update
+sudo apt upgrade
+sudo apt-get install virtualbox
+----
 
 === Create a Directory
 ----
@@ -15,7 +21,7 @@ cd ~/11steps
 
 === git clone materials
 ----
-git clone https://github.com/burrsutter/9stepsawesome
+git clone https://github.com/tiagordc/11stepsawesome
 ----
 
 === Make a directory for executables
@@ -26,16 +32,14 @@ cd bin
 
 === Download minikube & kubectl
 
-Some lines are Mac OS based, but if you are on Linux, change `darwin` to `linux`.
-
 ----
-curl -Lo minikube https://storage.googleapis.com/minikube/releases/v1.7.2/minikube-darwin-amd64
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/v1.7.2/minikube-linux-amd64
 
 chmod +x minikube
 
 ./minikube version
 
-curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.15.0/bin/darwin/amd64/kubectl 
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.15.0/bin/linux/amd64/kubectl 
 
 chmod +x kubectl
 
@@ -44,7 +48,7 @@ cd ..
 
 === Set Environment Variables
 ----
-export MINIKUBE_HOME=/Users/burrsutter/11steps;
+export MINIKUBE_HOME=/home/tiago/11steps;
 export PATH=$MINIKUBE_HOME/bin:$PATH
 export KUBECONFIG=$MINIKUBE_HOME/.kube/config
 export KUBE_EDITOR="code -w"
