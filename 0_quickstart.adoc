@@ -173,3 +173,11 @@ $ ctrl-c
 $ exit
 ----
 <1> you can shell into your VM and check on resources
+
+=== Install kubectx
+----
+sudo git clone https://github.com/ahmetb/kubectx /usr/local/kubectx
+sudo ln -s /usr/local/kubectx/kubectx /usr/local/bin/kubectx
+sudo ln -s /usr/local/kubectx/kubens /usr/local/bin/kubens
+----
+
